@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Big+Shoulders+Display:wght@100..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:wght@100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Lexend+Deca:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+:root{
+  /* Primary */
+  --Moderateviolet: hsl(263, 55%, 52%);
+  --Verydarkgrayishblue: hsl(217, 19%, 35%);
+  --Verydarkblackishblue: hsl(219, 29%, 14%);
+  --White: hsl(0, 0%, 100%);
+  /* Neutral */
+  /* --Grey :hsl(217, 15%, 41%); */
+  --Lightgray: hsl(0, 0%, 81%);
+  --Lightgrayishblue: hsl(210, 46%, 95%);
+  /* Font */
+  --ff-Barlow: 'Barlow Semi Condensed', system-ui;
+  --fw-400:500;
+  --fw-700:600;
+  /* Font size */
+  --fs-300: 0.6875rem;
+  --fs-400: 0.8125rem;
+  --fs-500: 1.25rem;
+}
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .bgcolor-primary-Voilet{
+    background-color: var(--Moderateviolet);
+  }
+  .color-lightgray{
+    color: var(--Lightgray);
+  }
+  .bgcolor-verygrayishblue{
+    background-color: var(--Verydarkgrayishblue);
+  }
+  .bgcolor-white{
+    background-color: var(--White);
+  }
+  .bgcolor-veryblackishblue{
+    background-color: var(--Verydarkblackishblue);
+  }
+  .color-varydarkgrayishblue{
+    color: var(--Verydarkgrayishblue);
+  }
+  .fs-300{
+    font-size: var(--fs-300);
+  }
+  .fs-400{
+    font-size: var(--fs-400);
+  }
+  .fs-500{
+    font-size: var(--fs-500);
+  }
+  .Color-White{
+    color: var(--White);
+  }
+  .font-weight-400{
+    font-weight: var(--fw-400);
+  }
+  .font-weight-700{
+    font-weight: var(--fw-700);
+  }
+  article:last-child{
+    display: flex;
+    flex-direction: column;
+    row-gap: -7.7rem;
+    padding: 3em 2.5em 2.75em 2.5em;
+    font-size: var(--fs-300);
+    h1{
+      margin-top: -1rem;
+    }
+    span{
+      line-height: 2em;
+    }
+  }
+
+  article:last-child > blockquote{
+    line-height: 1.4em;
+  }
+  .profile-picture-adjust{
+    border-radius: 50%;
+    width: 2em;
+    border: 2px solid hsl(263, 55%, 71%);
+  }
+  .profile-picture-border-none{
+    border: none;
+  }
+  .profile-picture-border-moderateviolet{
+    border-radius: 50%;
+    width: 2em;
+    border: 2px solid var(--Moderateviolet);
+  }
+  .bg-img-quote{
+    background-image: url(images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: top right 18%;
+  }
+  .profile-picture-adjust-last-child{
+    width:1.75rem;
+    margin-top: -.75rem;
+  }
+  body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--ff-Barlow);
+    background-color: var(--Lightgrayishblue);
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+
+  }
+  blockquote{
+    line-height: 1.25em;
+    transition: all 300ms ease-out;
+  }
+  article > section{
+    display: flex;
+    align-items: center;
+    column-gap: .85rem ;
+    transition: all 300ms ease-out;
+  }
+  article > section > div > p{
+    line-height: .35em;
+  }
+  article{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    row-gap: 1.175rem;
+    transition: all 300ms ease-out;
+  }
+  .testimonial:hover{
+    transform: translateY(-1em);
+    
+  }
+  #testimonial-grid{
+    padding-block: 2rem;
+    width: min(95%,70rem);
+    margin-inline: auto;
+    white-space: wrap;
+    display: grid;
+    grid-template-areas: 'one''two''three''four''five';
+    grid-auto-columns: 1fr;
+    gap: 2rem;
+    transition: all 300ms ease-out;
+  }
+  .testimonial:nth-child(1){
+    grid-area: one;
+  }
+  .testimonial:nth-child(2){
+    grid-area: two;
+  }
+  .testimonial:nth-child(3){
+    grid-area: three;
+  }
+  .testimonial:nth-child(4){
+    grid-area: four;
+  }
+  .testimonial:nth-child(5){
+    grid-area: five;
+  }
+ .testimonial{
+    padding: 1.5rem 2.25em 2em 2em;
+    border-radius: 8px;
+    box-shadow: 2.5rem 3.75rem 3rem -3rem hsla(217, 19%, 35%,.25);
+    transition: all 300ms ease-out;
+  }
+  @media (min-width :600px){
+    #testimonial-grid{
+      display: grid;
+      grid-template-areas: 'one one two five'
+                          'three four four five';
+    }
+  }
+  @media (min-width :600px) and (max-width : 900px){
+    #testimonial-grid{
+      display: grid;
+      grid-template-areas: 'one one'
+                            'two three'
+                            'four five'
+                            ;
+    }
+  }
+/* Written by NBS 🫠 */
